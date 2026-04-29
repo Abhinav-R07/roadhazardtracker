@@ -48,7 +48,7 @@ const HazardForm = ({ onNewHazard }) => {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/api/hazards', {
+      const response = await fetch('https://roadhazardtracker-4hu8.onrender.com/api/hazards', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

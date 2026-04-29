@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { io } from 'socket.io-client';
 
-const socket = io('http://localhost:5000'); // Use your backend URL here
+const socket = io('https://roadhazardtracker-4hu8.onrender.com'); // Use your backend URL here
 
 const HazardList = () => {
   const [hazards, setHazards] = useState([]);
@@ -11,7 +11,7 @@ const HazardList = () => {
   useEffect(() => {
     const fetchHazards = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/hazards');
+        const response = await fetch('https://roadhazardtracker-4hu8.onrender.com/api/hazards');
         const data = await response.json();
         if (response.ok) {
           setHazards(data);
